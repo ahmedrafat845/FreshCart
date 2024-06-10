@@ -1,0 +1,29 @@
+.hov {
+    position: relative;
+    width: 160px;
+    height: 110px;
+  }
+  
+  .card1 {
+    background: linear-gradient(-45deg, #35f43c 0%, #40c9ff 100% );
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+  }
+  
+  .hov:hover .card1 {
+    transform: rotate(-180deg) scaleX(1.34) scaleY(0.77);
+  }
+  
+  .card2 {
+    position: absolute;
+    top: 5px;
+    left: 17px;
+    width: 150px;
+    height: 100px;
+    background-color: rgb(85, 85, 85);
+    padding: 10px;
+    color: white;
+  }
+  

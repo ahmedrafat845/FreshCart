@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.rating-color{
+  color: gold;
+}
+.linkk{
+  text-decoration: none ;
+  color: inherit ;
+   
+}
+.navLink{
+  color: white !important;
+}
+
+.product .btn{
+  margin-top: 10px;
+  transform: translateY(100%);
+  transition: all .5s;
+  opacity: 0;
+
+}
+.product:hover .btn{
+  transform: translateY(0%);
+  opacity: 1;
+}
+.loading{
+  height: 650px;
+  color: rgb(56, 195, 21);
+}
+.loading2{
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(209, 252, 145, 0.2);
+  height: 900px;
+  color: rgba(255, 255, 255, 0.7);
+  
+}
+a{
+  cursor: pointer;
+}
+
+.image-transition {
+  opacity: 0;
+  transition: opacity 0.5s ;
+}
+
+.image-transition.show {
+  opacity: 1;
+  
+}
+
+.transformScale{
+  transition: all .5s;
+  
+}
+.transformScale:hover{
+  transform: scale(1.03);
+  box-shadow:  1px 2px 10px rgb(39, 253, 60)
+  
+}
+.product-red-BoxShadow{
+  box-shadow:  1px 2px 10px rgba(235, 28, 28, 0.5)
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(-45deg, #35f43c 0%, #40c9ff 100% );
+  border-radius: 6px;
+}
+.line{
+  height: 3px;
+  background: linear-gradient(-45deg, #35f43c 0%, #40c9ff 100% );
+
+}
+.pointerIcon{
+  cursor: pointer;
+}
+.AllLogin{
+  padding-bottom: 115px;
+}
+input{
+  margin: 20px 0px !important;
+}
+.NavDropdown:hover{
+  background-color: #befdc0 !important;
+}
+

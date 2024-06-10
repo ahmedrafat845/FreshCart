@@ -1,0 +1,72 @@
+.productCart{
+    transition: all .5s;
+}
+
+.productCart:hover{
+    background-color: rgb(186, 255, 180);
+    transform: scale3(1.004);
+
+}
+.delete{
+    transition: all .5s;
+}
+.delete:hover{
+    transform: rotate(360deg);
+}
+
+
+.updatePlus,.updateMinus{
+    width: 30px;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    height: 30px;
+    padding-top: 3px;
+    transition: all .2s;
+}
+.updatePlus{
+    border:2px solid rgb(56, 195, 21);
+
+}
+.updateMinus{
+    border:2px solid rgb(220, 53, 69);
+
+}
+.plus,.minus{
+    font-size: 22px;
+    transition: all .5s;
+    padding: 0;
+}
+.plus{
+    color: rgb(56, 195, 21);
+
+}
+.minus{
+    color:rgb(220, 53, 69) ;
+}
+.updatePlus:hover{
+    background-color: rgb(74, 222, 128,.2);
+}
+.updatePlus:hover .plus{
+    color: rgb(56, 195, 21);
+    transform: rotate(180deg);
+}
+.updateMinus:hover{
+    background-color: rgb(239, 155, 155);
+}
+.updateMinus:hover .minus{
+ 
+    transform: rotate(180deg);
+}
+.count{
+    width: 30px;
+
+    text-align: center;
+    padding: 3px;
+    height: 30px;
+    color: rgb(177, 9, 88);
+    margin: 0 10px ;
+    border:1px solid rgb(110, 110, 110);
+    border-radius:5px;
+   
+}
