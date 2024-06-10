@@ -20,7 +20,6 @@ export default function FetchProductProvider(props) {
   const [addProduct, setAddProduct] = useState([])
   const [cart, setCart] = useState([])
   const [numOfCart, setNumOfCart] = useState(0)
-
   const [loading, setLoading] = useState(false)
   let token=localStorage.getItem('token')
   const { userData, saveUserData } = useContext(mediaContext);

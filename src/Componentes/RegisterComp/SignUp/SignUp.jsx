@@ -177,7 +177,7 @@ export default function SignUp() {
                       
                       }
                  
-                   </button> <span>have account ? <Link to={'/Login'} className='linkk text-success'>Login</Link></span>
+                   </button> <span> have account ? <Link to={'/Login'} className='linkk text-success'>Login</Link></span>
                    </div>
                     </form>
                 </div>

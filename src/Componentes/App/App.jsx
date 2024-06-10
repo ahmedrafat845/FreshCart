@@ -32,6 +32,7 @@ import UpdateData from '../RegisterComp/UpdateData/UpdateData';
 
 
 
+
 export default function App() {
   
  

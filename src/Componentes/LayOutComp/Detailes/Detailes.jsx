@@ -8,7 +8,7 @@ import { FetchProductContext } from './../../../Context/FetchProduct';
 
 export default function Details({endpoint,id}) {
 
-  let {getIdProduct,loading}=useContext(FetchProductContext)
+  let {AddProductToCart,loading}=useContext(FetchProductContext)
   const [productDetails, setProductDetails] = useState([]);
   const [imagess, setImages] = useState([])
   const [imageSrc, setImageSrc] = useState('')
@@ -115,7 +115,7 @@ export default function Details({endpoint,id}) {
             <i className='fas  fa-star rating-color'></i>
             <span className='fs-4  ms-2'>{productDetails.ratingsAverage}</span>
           </div>
-          <button onClick={()=>getIdProduct(productDetails._id)} className='btn btn-success w-100'>
+          <button onClick={() =>AddProductToCart(productDetails._id)} className='btn btn-success w-100'>
             {loading? <i class="fa-solid fa-cart-shopping fa-spin"></i>:" Add to Card"}
             
           </button>

@@ -136,7 +136,7 @@ export default function Login() {
                       }
                  
                    </button> 
-                   <span>Do not have account ? <Link to={'/SignUp'} className='linkk text-success'>SignUp</Link></span>
+                   <span>  Do not have account ? <Link to={'/SignUp'} className='linkk text-success'>SignUp</Link></span>
                  <Link to={'/ForgetPassword'} className='linkk text-success float-end'>Forget Your Password ?{" "}</Link>
                    </div>
                     </form>
