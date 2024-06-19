@@ -94,7 +94,7 @@ export default function Login() {
      <div className='  overflow-hidden AllLogin pt-3'>
      <div className="container mt-5 pt-5 ">
         <div className="row">
-            <div className="col-md-8 m-auto">
+            <div className="col-md-8  m-auto">
                 <div className={`${style.orderInputs}   p-5 rounded-2 `}>
                     <h3 className='mb-3 text-success'>Welcome To Our Login 😊:</h3>
                 <form onSubmit={Formik.handleSubmit} className="  ">
@@ -127,17 +127,22 @@ export default function Login() {
                      </div>
                     </div>
 
-                   <div className=''>
-                   <button disabled={!(Formik.isValid && Formik.dirty && !loading)} type='submit' className='btn btn-success  '>
+                   <div className='row g-2'>
+                  <div className="col-md-3">
+                  <button disabled={!(Formik.isValid && Formik.dirty && !loading)} type='submit' className='btn btn-success w-100 '>
                    
-                      {!loading? ("Login"):
-                      <i className='fa-spinner fa-spin fas'></i>
-                      
-                      }
-                 
-                   </button> 
+                   {!loading? ("Login"):
+                   <i className='fa-spinner fa-spin fas'></i>
+                   
+                   }
+              
+                </button>
+                    
+                    </div> 
+                   <div className="col-md-9 pt-2">
                    <span>  Do not have account ? <Link to={'/SignUp'} className='linkk text-success'>SignUp</Link></span>
-                 <Link to={'/ForgetPassword'} className='linkk text-success float-end'>Forget Your Password ?{" "}</Link>
+                   <Link to={'/ForgetPassword'} className='linkk text-success float-end '>Forget Your Password ?{" "}</Link>
+                   </div>
                    </div>
                     </form>
                 </div>
@@ -150,41 +155,3 @@ export default function Login() {
     </>
   )
 }
-
-
-// <form onSubmit={Formik.handleSubmit}   className='p-2 text-center '>
-                
-
-
-//                 <div>
-//                    <input onBlur={Formik.handleBlur} onChange={Formik.handleChange} value={Formik.values.email} className='form-control ' type='email' name='email' placeholder='enter your email..'/>
-                 
-//                    <div className={`${style.errorList}`}>
-//                    <ErrorList Formik={Formik} type={"email"} />
- 
-//                  </div>
-//                 </div>
- 
-//                <div>
-//                    <input onBlur={Formik.handleBlur} onChange={Formik.handleChange} value={Formik.values.password} className='form-control' type='password' name='password' placeholder='enter your password..'/>
-                   
-//                    <div className={`${style.errorList}`}>
-//                    <ErrorList Formik={Formik} type={"password"} />
- 
-//                  </div>
-//                </div>
-//                  <button disabled={!(Formik.isValid && Formik.dirty && !loading)} type='submit' className='btn btn-success   w-50'>
-                   
-//                       {!loading? ("Login"):
-//                       <i className='fa-spinner fa-spin fas'></i>
-                      
-//                       }
-                 
-//                    </button>
-//                  <p className='mt-2 text-success'>do not have account ?{" "} <a href='' className='text-danger' onClick={goToRegister} >SignUp</a> </p>
-//                  <Link to={'/ForgetPassword'} className='mt-2 text-success linkk'>Forget Your Password ?{" "}</Link>
- 
-                 
- 
-//                </form>
-

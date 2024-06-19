@@ -28,12 +28,6 @@ export default function MasterLayOut() {
              <div className='line'></div>
           
              <Outlet/>
-
-       
-            
-             {/* <Footer/> */}
-           
-
         </ThemeProvider>
    
       

@@ -170,7 +170,7 @@ export default function SignUp() {
                     </div>
 
                    <div className=''>
-                   <button disabled={!(Formik.isValid && Formik.dirty && !loading)} type='submit' className='btn btn-success  '>
+                   <button disabled={!(Formik.isValid && Formik.dirty && !loading)} type='submit' className='btn btn-success w-25 '>
                    
                       {!loading? ("SignUp"):
                       <i className='fa-spinner fa-spin fas'></i>

@@ -7,34 +7,7 @@ export default function Wishlist() {
   let {wishListProduct,loading}=useContext(WishlistContext)
   return (
     <>
-   {loading?
-     <div className='container'>
-         <div className='loading loading2  d-flex justify-content-center align-items-center'>
-        
-        <i class="fa-5x fa-solid fa-cart-shopping fa-spin text-success"></i>
-        </div>
-        <div>
-    {wishListProduct.count > 0 ?
-        <div className="row pt-5">
-          <Product products={wishListProduct.data}/>
-        </div>
-    
- : 
-  
-  
-      <div className="row">
-        <div className='col-md-9 m-auto text-center pt-5'>
-            <img src={noProduct} className='w-50' alt="" />
-        </div>
-      </div>
 
-
-     }
-
-   </div>
-   
-     </div>
-   :
    <div>
     {wishListProduct.count > 0 ?
      <div className="container pt-5">
@@ -58,7 +31,7 @@ export default function Wishlist() {
    </div>
    
    
-  }
+
 
       
     </>
