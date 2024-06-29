@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
 import style from '../CartOrder/CartOrder.module.scss'
+import { FetchProductContext } from '../../../Context/FetchProduct'
 
 export default function AllOrder() {
+  let {clearCart}=useContext(FetchProductContext)
+  const [boolean, setboolean] = useState(true)
+  if(boolean){
+    clearCart()
+    setboolean(false)
+  }
   return (
     <>
      <div className="container pt-5">

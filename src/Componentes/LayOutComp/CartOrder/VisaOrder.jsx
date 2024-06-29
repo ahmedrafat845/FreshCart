@@ -1,4 +1,4 @@
-import React, { useContext, useState, useSyncExternalStore } from 'react'
+import React, { useContext, useState } from 'react'
 import style from './CartOrder.module.scss'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -12,7 +12,7 @@ import ErrorList from '../../RegisterComp/ErrorList/ErrorList'
 export default function VisaOrder() {
     const [Loading, setLoading] = useState(false)
     let token=localStorage.getItem('token')
-    let {userId}=useContext(FetchProductContext)
+    let {cart,setCart}=useContext(FetchProductContext)
 
     const notify = (msg,type) => {
         toast[type](msg,{
@@ -41,16 +41,18 @@ export default function VisaOrder() {
 
         onSubmit:(values)=>{
             setLoading(true)
-            axios.post(`${BaseUrl}/api/v1/orders/checkout-session/${userId}?url=http://localhost:3000`, values,{
+            axios.post(`${BaseUrl}/api/v1/orders/checkout-session/${cart.data._id}?url=http://localhost:3000`, values,{
                 headers:{
                     token:token
                 }
             })
             .then((data)=>{
               if(data.status=== 200){
+                setCart([])
                 notify('successssss','success')
                 setLoading(false)
                 window.location.href = data.data.session.url
+                setCart([])
               }
             }).catch((error)=>{
               if(error.response.status==401){

@@ -70,9 +70,7 @@ export default function UpdateData() {
 
 
   })
-  let goToLogin=()=>{
-    navigate("/Login");
-  }
+
   
   
 

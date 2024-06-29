@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom'
 export default function CashOrder() {
     const [Loading, setLoading] = useState(false)
     let token=localStorage.getItem('token')
-    let {userId,setnumOfCart}=useContext(FetchProductContext)
+    let {cart,setCart}=useContext(FetchProductContext)
     let navigate=useNavigate()
 
     const notify = (msg,type) => {
@@ -43,16 +43,17 @@ export default function CashOrder() {
 
         onSubmit:(values)=>{
             setLoading(true)
-            axios.post(`${BaseUrl}/api/v1/orders/${userId}`, values,{
+            axios.post(`${BaseUrl}/api/v1/orders/${cart.data._id}`, values,{
                 headers:{
                     token:token
                 }
             })
             .then((data)=>{
               if(data.status=== 201){
+                setCart([])
                 notify('successssss','success')
                 setLoading(false)
-                setnumOfCart(0)
+                
                 navigate('/')
                 
               }

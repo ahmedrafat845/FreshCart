@@ -65,7 +65,7 @@ export default function WishlistContextProvider(props){
         setWishListProduct(data)
        }catch(error){
         setLoading(false)
-        notify('error','error')
+        notify('error9','error')
     }
     }
     useEffect(() => {

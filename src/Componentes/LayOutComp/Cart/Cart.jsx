@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import noProduct from '../../../finalProject assets/noCart.png'
 
 export default function Cart() {
-   let {cart,loading,deleteProductCart,UpdateProductCart,clearCart,numOfCart} = useContext(FetchProductContext)
+   let {cart,loading,deleteProductCart,UpdateProductCart,clearCart} = useContext(FetchProductContext)
 
     let increaseCounter=(itemCount,id)=>{
        
@@ -35,7 +35,7 @@ export default function Cart() {
         </div>
         <div className="row">
            
-         {numOfCart > 0 ? 
+         {cart.numOfCartItems > 0 ? 
           (
             <div >
             <div className="row">
@@ -55,7 +55,6 @@ export default function Cart() {
                    <div className="caption w-50  d-flex ">
                        <img src={item.product.imageCover} className='w-25 rounded-3' height={160} alt="" />
                       <div className='ms-3 p-2'>
-                       <h5>Brand : <span className='text-success'> {item.product.brand.name}</span></h5>
                        <h5>Category : <span className='text-success'> {item.product.category.name}</span></h5>
                        <p>title : <span className='text-success'>{item.product.title}</span></p>
                        <p>price : <span className='text-success'>{(item.price)*(item.count)}</span></p>
@@ -100,7 +99,7 @@ export default function Cart() {
         <div className="container mt-5">
         <div className="row">
            
-         {numOfCart > 0 ? 
+         {cart.numOfCartItems > 0 ? 
           (
             <div >
             <div className="row">
@@ -120,7 +119,7 @@ export default function Cart() {
                    <div className="caption w-50  d-flex ">
                        <img src={item.product.imageCover} className='w-25 rounded-3' height={160} alt="" />
                       <div className='ms-3 p-2'>
-                       <h5>Brand : <span className='text-success'> {item.product.brand.name}</span></h5>
+                       {/* <h5>Brand : <span className='text-success'> {item.product.brand.name}</span></h5> */}
                        <h5>Category : <span className='text-success'> {item.product.category.name}</span></h5>
                        <p>title : <span className='text-success'>{item.product.title}</span></p>
                        <p>price : <span className='text-success'>{(item.price)*(item.count)}</span></p>

@@ -112,7 +112,7 @@ export default function FetchProductProvider(props) {
         headers:{
             'token':token}})
        
-        setNumOfCart([])
+
         setCart([])
         setLoading(false)
         notify('products delete successful','success')
@@ -135,7 +135,7 @@ export default function FetchProductProvider(props) {
    
 
   return (
-    <FetchProductContext.Provider value={{AddProductToCart,
+    <FetchProductContext.Provider value={{AddProductToCart,setNumOfCart,
     addProduct,getProductCart,cart,setCart,loading,setLoading,deleteProductCart,
     numOfCart,UpdateProductCart,clearCart
     }}>
