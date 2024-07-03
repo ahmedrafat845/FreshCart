@@ -41,7 +41,7 @@ export default function VisaOrder() {
 
         onSubmit:(values)=>{
             setLoading(true)
-            axios.post(`${BaseUrl}/api/v1/orders/checkout-session/${cart.data._id}?url=http://localhost:3000`, values,{
+            axios.post(`${BaseUrl}/api/v1/orders/checkout-session/${cart.data._id}?url=https://fresh-cart-roan.vercel.app/`, values,{
                 headers:{
                     token:token
                 }
